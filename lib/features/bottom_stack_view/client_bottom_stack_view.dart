@@ -23,8 +23,23 @@ class ClientBottomStackView extends ConsumerWidget {
     final selectedIndex = ref.watch(bottomStackViewProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text("Home")),
-      body: Center(child: Text("I am client_bottom_stack_view")),
+      backgroundColor: Colors.black,
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      body: AppGradientBackground(
+        child: SafeArea(
+          child: Center(
+            child: Text(
+              'CONTENT HERE',
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 22,
+                letterSpacing: 1.5,
+              ),
+            ),
+          ),
+        ),
+      ),
       bottomNavigationBar: FloatingPillNavBar(
         selectedIndex: selectedIndex,
         onTabChange: (index) =>
