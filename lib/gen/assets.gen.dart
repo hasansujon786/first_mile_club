@@ -18,12 +18,20 @@ class $AssetsImagesGen {
   AssetGenImage get fmcSplash =>
       const AssetGenImage('assets/images/fmc_splash.png');
 
+  /// File path: assets/images/native_splash.png
+  AssetGenImage get nativeSplash =>
+      const AssetGenImage('assets/images/native_splash.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [fmcSplash];
+  List<AssetGenImage> get values => [fmcSplash, nativeSplash];
 }
 
 abstract final class Assets {
+  static const String aEnv = '.env';
   static const $AssetsImagesGen images = $AssetsImagesGen();
+
+  /// List of all assets
+  static List<String> get values => [aEnv];
 }
 
 class AssetGenImage {
