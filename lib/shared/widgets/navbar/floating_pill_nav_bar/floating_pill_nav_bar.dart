@@ -12,8 +12,8 @@ class NavBarTabItem extends GButton {
     IconData? icon,
     String? activeIcon,
     String? inactiveIcon,
-    Color activeColor = AppColors.background,
-    Color inactiveColor = AppColors.white,
+    Color activeColor = AppDarkColors.background,
+    Color inactiveColor = AppDarkColors.white,
     required super.text,
   }) : super(
          leading: activeIcon != null && inactiveIcon != null
@@ -47,7 +47,7 @@ class FloatingPillNavBar extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: AppColors.elevated, // Dark Navy Background
+            color: AppDarkColors.elevated, // Dark Navy Background
             borderRadius: BorderRadius.circular(40),
             boxShadow: [
               BoxShadow(
@@ -58,8 +58,8 @@ class FloatingPillNavBar extends StatelessWidget {
             ],
           ),
           child: GNav(
-            tabBackgroundColor: AppColors.primary, // Active tab background
-            activeColor: AppColors.primaryForeground,
+            tabBackgroundColor: AppDarkColors.primary, // Active tab background
+            activeColor: AppDarkColors.primaryForeground,
             color: Colors.white, // Inactive icon color
             rippleColor: Colors.white12,
             hoverColor: Colors.white12,

@@ -1,4 +1,5 @@
 import 'package:first_mile_club/core/routing/app_router.dart';
+import 'package:first_mile_club/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -22,10 +23,11 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(goRouterProvider);
 
-    return (MaterialApp.router(
+    return MaterialApp.router(
       routerConfig: router,
-      // theme: AppTheme.light,
+      theme: AppTheme.dark,
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-    ));
+    );
   }
 }
